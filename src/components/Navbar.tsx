@@ -20,6 +20,7 @@ export default function Navbar() {
           <a href="/courses.html">Our Courses</a>
         </nav>
       </header>
+      <div className="section-header-spacer"></div>
     </div>
   );
 }

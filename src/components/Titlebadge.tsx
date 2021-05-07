@@ -1,10 +1,14 @@
 import React from "react";
 
-export default function Titlebadge() {
+type Props = {
+  text: string;
+};
+
+export default function Titlebadge(props: Props) {
   return (
     <div>
       <div className="title-badge">
-        <div className="title-badge-title">Do you want to</div>
+        <div className="title-badge-title">{props.text}</div>
       </div>
     </div>
   );

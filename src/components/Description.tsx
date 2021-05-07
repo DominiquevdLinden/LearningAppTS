@@ -1,12 +1,13 @@
 import React from "react";
 
-export default function Description() {
+type Props = {
+  text: string;
+};
+
+export default function Description(props: Props) {
   return (
     <div>
-      <div className="description">
-        Awesome! Let’s do this together. We are here to support you in your
-        coding journey.
-      </div>
+      <div className="description">{props.text}</div>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import React from "react";
 type Props = {
   url: string;
   text: string;
+  desc?: string;
 };
 
 export default function InfoCard(props: Props) {
