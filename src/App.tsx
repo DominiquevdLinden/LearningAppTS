@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Block from "./components/Block";
+import Footer from "./components/Footer";
 
 let navbarData = {
   imgSrcOne: "https://learntocodetogether.nl/assets/icon.svg",
@@ -76,6 +77,12 @@ let Data = [
   },
 ];
 
+let footerData = {
+  imgSrcOne: "https://learntocodetogether.nl/assets/logo.svg",
+  imgSrcTwo: "https://learntocodetogether.nl/assets/danny&rein.svg",
+  names: "Rein Op 't land & Danny van der Jagt",
+};
+
 export default function App() {
   return (
     <div>
@@ -84,34 +91,23 @@ export default function App() {
         imgSrcTwo={navbarData.imgSrcTwo}
         title={navbarData.title}
       />
-
-      {Data.map((block) => {
-        return (
-          <Block
-            titleBadge={block.titleBadge}
-            title={block.title}
-            description={block.description}
-            infoCards={block.infoCards}
-          />
-        );
-      })}
-
-      <div className="section-footer">
-        <img
-          className="logo"
-          src="https://learntocodetogether.nl/assets/logo.svg"
-        />
-        <div className="title">Created by</div>
-        <div className="subtitle">
-          Rein Op &#x27;t land &amp; Danny van der Jagt
-        </div>
-        <div className="team-container">
-          <img
-            className="team"
-            src="https://learntocodetogether.nl/assets/danny&rein.svg"
-          />
-        </div>
+      <div className="content">
+        {Data.map((block) => {
+          return (
+            <Block
+              titleBadge={block.titleBadge}
+              title={block.title}
+              description={block.description}
+              infoCards={block.infoCards}
+            />
+          );
+        })}
       </div>
+      <Footer
+        imgSrcOne={footerData.imgSrcOne}
+        imgSrcTwo={footerData.imgSrcTwo}
+        names={footerData.names}
+      />
     </div>
   );
 }

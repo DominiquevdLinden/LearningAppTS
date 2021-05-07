@@ -15,26 +15,24 @@ type Props = {
 export default function Block(props: Props) {
   return (
     <div>
-      <div className="content">
-        <div>
-          <div className="section section-what-usp">
-            <div className="component-section-header">
-              <Titlebadge text={props.titleBadge} />
-              <Title text={props.title} />
-              <Description text={props.description} />
-            </div>
+      <div>
+        <div className="section section-what-usp">
+          <div className="component-section-header">
+            <Titlebadge text={props.titleBadge} />
+            <Title text={props.title} />
+            <Description text={props.description} />
+          </div>
 
-            <div className="component-usp-row">
-              {props.infoCards.map((card) => {
-                return (
-                  <InfoCard
-                    url={card.url}
-                    text={card.text}
-                    desc={card.description}
-                  />
-                );
-              })}
-            </div>
+          <div className="component-usp-row">
+            {props.infoCards.map((card) => {
+              return (
+                <InfoCard
+                  url={card.url}
+                  text={card.text}
+                  desc={card.description}
+                />
+              );
+            })}
           </div>
 
           <div className="section-line">
