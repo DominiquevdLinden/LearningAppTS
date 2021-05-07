@@ -1,23 +1,23 @@
 import React from "react";
 
-export default function Navbar() {
+type Props = {
+  imgSrcOne: string;
+  imgSrcTwo: string;
+  title: string;
+};
+
+export default function Navbar(props: Props) {
   return (
     <div>
       <header id="header" className="section-header scroll">
         <a href="./">
-          <img
-            className="icon"
-            src="https://learntocodetogether.nl/assets/icon.svg"
-          />
+          <img className="icon" src={props.imgSrcOne} />
         </a>
         <a href="https://www.meetup.com/Learning-to-Code-Amsterdam/">
-          <img
-            className="meetup-icon"
-            src="https://learntocodetogether.nl/assets/meetup-icon.svg"
-          />
+          <img className="meetup-icon" src={props.imgSrcTwo} />
         </a>
         <nav>
-          <a href="/courses.html">Our Courses</a>
+          <a href="/courses.html">{props.title}</a>
         </nav>
       </header>
       <div className="section-header-spacer"></div>

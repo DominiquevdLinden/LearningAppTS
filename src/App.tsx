@@ -1,7 +1,12 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Block from "./components/Block";
-import Titlebadge from "./components/Titlebadge";
+
+let navbarData = {
+  imgSrcOne: "https://learntocodetogether.nl/assets/icon.svg",
+  imgSrcTwo: "https://learntocodetogether.nl/assets/meetup-icon.svg",
+  title: "Our Courses",
+};
 
 let Data = [
   {
@@ -74,7 +79,11 @@ let Data = [
 export default function App() {
   return (
     <div>
-      <Navbar />
+      <Navbar
+        imgSrcOne={navbarData.imgSrcOne}
+        imgSrcTwo={navbarData.imgSrcTwo}
+        title={navbarData.title}
+      />
 
       {Data.map((block) => {
         return (
